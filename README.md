@@ -8,6 +8,10 @@
   A responsive, bilingual health insurance website built with React, TypeScript, and Tailwind CSS.
 </p>
 
+<p align="center">
+  <img src="docs/screenshots/desktop-homepage.png" alt="NOVARA Health Group desktop homepage preview" width="960" />
+</p>
+
 ## Overview
 
 NOVARA Health Group is a frontend project that explores a modern digital experience for health insurance products and services. It brings product discovery, application journeys, customer self-service concepts, and company information together in a consistent web interface.
@@ -24,6 +28,30 @@ The website was independently designed and developed by **Gizem Öztürk** as pa
 - **Additional sections:** Company information, careers, brokers, and support pages.
 - **Accessibility preferences:** Adjustable text size, high-contrast options, and keyboard-friendly navigation components.
 - **Optimized routing:** Page-level lazy loading and code splitting for more efficient initial loading.
+
+## Interface Preview
+
+The interface brings together responsive navigation, insurance product discovery, and customer self-service concepts.
+
+<table>
+  <tr>
+    <td align="center" width="38%" valign="top">
+      <img src="docs/screenshots/mobile-homepage.png" alt="NOVARA mobile homepage preview" width="235" />
+      <p><strong>Mobile homepage</strong></p>
+    </td>
+    <td align="center" width="62%" valign="top">
+      <img src="docs/screenshots/customer-dashboard.png" alt="NOVARA customer insurance dashboard" width="560" />
+      <p><strong>Customer dashboard</strong></p>
+    </td>
+  </tr>
+</table>
+
+<details>
+  <summary><strong>View insurance product page</strong></summary>
+  <p align="center">
+    <img src="docs/screenshots/career-starters.png" alt="Career starters insurance product, plans, and FAQ page" width="760" />
+  </p>
+</details>
 
 ## Tech Stack
 
