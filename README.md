@@ -1,99 +1,97 @@
 <p align="center">
-  <img src="public/logo.svg" alt="NOVARA Health Group logo" width="76" height="76">
+  <img src="./public/logo.svg" alt="NOVARA Health Group logo" width="84" height="84" />
 </p>
 
-# NOVARA Health Group
+<h1 align="center">NOVARA Health Group</h1>
 
-**Responsive health insurance website · React / TypeScript · University frontend project**
+<p align="center">
+  A responsive, bilingual health insurance website built with React, TypeScript, and Tailwind CSS.
+</p>
 
-NOVARA is a **fictional, bilingual health-insurance frontend prototype**, independently designed and implemented by **Gizem Öztürk** for the *E-Commerce-Anwendungen* course at **Universität Bremen (2026)**. The coursework was formally organized as a three-person assignment; **the website design and code in this repository are solely my work**.
+## Overview
 
-> **Prototype notice.** No real insurance provider or backend is connected. Logins, applications, claim submissions, appointments, uploads, and contact requests are illustrative UI flows; they do not send or store information on a server. The full-width prototype banner is intentionally omitted from the interface; action-related demo notices remain visible next to simulated workflows. Use fictional test data only. Email addresses using the reserved `.example` domain are fictional.
+NOVARA Health Group is a frontend project that explores a modern digital experience for health insurance products and services. It brings product discovery, application journeys, customer self-service concepts, and company information together in a consistent web interface.
+
+The website was independently designed and developed by **Gizem Öztürk** as part of the **E-Commerce-Anwendungen** course at **Universität Bremen** in 2026. The brand and insurance scenarios are fictional, with sample content used to demonstrate the interface.
 
 ## Features
 
-- **Bilingual interface:** German and English navigation, content and form labels.
-- **Insurance product exploration:** coverage and pricing examples for different audiences.
-- **Multi-step application flows:** frontend form validation with React Hook Form and Zod; no real submission.
-- **Self-service concepts:** appointment, document, claims and service screens.
-- **Recruiting and partner pages:** job details, example application forms and broker information.
-- **Accessibility options:** high-contrast preference, font-size controls and keyboard-accessible navigation.
-- **Page-level code splitting:** lazy-loaded pages, so users download route-specific code as needed.
-- **Automated checks:** TypeScript, ESLint, Vitest data-integrity tests and Vite build.
+- **Bilingual experience:** German and English content, navigation, and form labels.
+- **Responsive design:** Layouts adapted for desktop, tablet, and mobile screens.
+- **Insurance products:** Dedicated pages for different insurance plans and target groups.
+- **Interactive application journeys:** Multi-step forms with client-side validation using React Hook Form and Zod.
+- **Customer service interfaces:** Pages for appointments, claims, documents, and account-related workflows.
+- **Additional sections:** Company information, careers, brokers, and support pages.
+- **Accessibility preferences:** Adjustable text size, high-contrast options, and keyboard-friendly navigation components.
+- **Optimized routing:** Page-level lazy loading and code splitting for more efficient initial loading.
 
-## Tech stack
+## Tech Stack
 
-| Purpose | Technologies |
+| Category | Technologies |
 | --- | --- |
-| Web app | React 18, TypeScript, Vite |
-| Styling | Tailwind CSS 3, Radix UI, shadcn-style reusable components |
-| Routing | React Router 7 |
+| Frontend | React 18, TypeScript, Vite |
+| Styling and UI | Tailwind CSS 3, Radix UI, reusable components |
+| Navigation | React Router 7 |
 | Forms | React Hook Form, Zod |
-| Data & state | Mock data, React Context, browser localStorage for UI preferences |
-| Quality | TypeScript, ESLint, Vitest, GitHub Actions CI |
+| State and content | React Context, localStorage, mock data |
+| Testing and tooling | Vitest, ESLint, TypeScript |
+| Continuous integration | GitHub Actions |
 
-## Getting started
+## Getting Started
 
-Install **Node.js 20+** and npm. Open a terminal **in the folder containing `package.json`**:
+**Requirements:** Node.js 20 or later and npm.
+
+Clone the repository:
+
+```bash
+git clone https://github.com/gizemoeztuerk/novara-health-group.git
+cd novara-health-group
+```
+
+Install dependencies and start the development server:
 
 ```bash
 npm ci
 npm run dev
 ```
 
-The Vite dev server uses `http://localhost:8080` by default. No `.env`, credentials or external API are required.
+Open **http://localhost:8080/** in your browser.
 
-### Checks before publishing
+## Available Scripts
 
-```bash
-npm run typecheck   # TypeScript: noEmit
-npm run lint        # ESLint (some Fast Refresh warnings may remain)
-npm run test        # Vitest data-integrity tests
-npm run build       # Vite production output to dist/
-npm run preview     # Open the production build locally
-```
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Create a production build |
+| `npm run preview` | Preview the production build locally |
+| `npm run typecheck` | Run TypeScript checks |
+| `npm run lint` | Run ESLint |
+| `npm run test` | Run Vitest tests |
+| `npm run check` | Run type checking, linting, tests, and build |
 
-Run `npm run check` to execute the first four checks consecutively. On Windows, PowerShell and CMD are both supported. **Do not include `node_modules/` or `dist/` in a Git commit.**
-
-Further instructions are in [docs/TESTING.md](docs/TESTING.md).
-
-## Project structure
+## Project Structure
 
 ```text
 novara-health-group/
-├── .github/workflows/ci.yml
-├── docs/
-│   ├── ARCHITECTURE.md
-│   └── TESTING.md
-├── public/               # SVG graphics used by the demo
+├── .github/workflows/   # CI workflow
+├── docs/                # Architecture and testing documentation
+├── public/              # Public assets
 ├── src/
-│   ├── a11y/             # accessibility preferences
-│   ├── components/       # shared layout and UI components
-│   ├── data/             # fictional product and service data
-│   ├── i18n/             # German/English switching
-│   ├── pages/            # lazy-loaded routes
-│   └── test/             # data-integrity tests
-├── package.json
-├── package-lock.json     # committed for reproducible npm ci
-└── vite.config.ts
+│   ├── a11y/            # Accessibility preferences
+│   ├── components/      # Shared layout, forms, and UI
+│   ├── data/            # Sample insurance content
+│   ├── i18n/            # Language support
+│   ├── pages/           # Route-level page components
+│   └── test/            # Automated tests
+└── package.json
 ```
 
-## Architecture and limitations
+Additional technical details are available in [Architecture](docs/ARCHITECTURE.md) and [Testing](docs/TESTING.md).
 
-This repository implements a frontend **case study**, not a production insurance platform. It has **no secure authentication, database, API, real customer accounts, payment processing, claims handling or email delivery**. Some illustrative controls have no actual persistence or backend action. The automated tests currently verify mock data and navigation data; they **do not** replace UI, accessibility or end-to-end tests.
+## Author
 
-The coursework discussed additional ideas (headless CMS, backend services, EU cloud infrastructure); these are **proposals**, not implemented features. See [architecture notes](docs/ARCHITECTURE.md).
+**Gizem Öztürk**
 
-### Dependency-security status
+Website concept, UI design, and frontend implementation.
 
-The last Windows-side dependency audit reported **13 advisories total** and **7 advisories with `npm audit --omit=dev`** after non-forced updates and React Router 7. These are dependency-tree findings, not confirmed exploitable flaws in the deployed frontend. The remaining findings involve Tailwind-related CSS processing and test/build tooling. Do not use `npm audit fix --force` without evaluating breaking upgrades. Re-run audits when installing the project because the advisory database changes.
-
-## Authorship and use
-
-- **Website design and implementation:** Gizem Öztürk (sole frontend developer)
-- **University:** Universität Bremen
-- **Course:** E-Commerce-Anwendungen · **Year:** 2026
-- **Coursework format:** Three students were listed for the assignment; the website in this repository was built independently.
-- **Published contents:** Website source, sample data and technical documentation only: no group brochures, presentations, handouts or contact details.
-
-No open-source license is granted at this time. Third-party dependencies and assets retain their own licensing terms; verify redistribution and course-publication permissions before making the repository public.
+Developed independently within the university course project at Universität Bremen, 2026.
