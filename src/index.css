@@ -1,0 +1,374 @@
+/* Fonts need to load before Tailwind expands its CSS directives. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Lora:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* NOVARA Health Group Design System
+   Brand: "Your health. Your pace."
+   Style: Calm, trustworthy health-tech
+*/
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    /* Blue-first, calm health-tech palette */
+    --background: 210 55% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 210 40% 98%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 214 31% 91%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary: Modern Blue - Trust & Clarity */
+    --primary: 213 94% 43%;
+    --primary-foreground: 210 40% 98%;
+    --primary-light: 211 96% 60%;
+    --primary-dark: 216 72% 28%;
+
+    /* Secondary: Deep Blue - Structure */
+    --secondary: 216 72% 32%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Tertiary: Sky Blue - Highlights */
+    --tertiary: 200 92% 55%;
+    --tertiary-foreground: 0 0% 100%;
+
+    /* Muted surfaces */
+    --muted: 215 20% 65%;
+    --muted-foreground: 222 47% 11%;
+
+    /* Accent: Very light blue tint */
+    --accent: 214 100% 97%;
+    --accent-foreground: 215 25% 28%;
+
+    /* Semantic Colors */
+    --success: 155 70% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 40 95% 50%;
+    --warning-foreground: 40 95% 15%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 85% 97%;
+
+    --info: 200 80% 50%;
+    --info-foreground: 0 0% 100%;
+
+    /* UI Elements */
+    --border: 212 26% 83%;
+    --input: 212 26% 83%;
+    --ring: 213 94% 43%;
+
+    --radius: 0.5rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(216 72% 32%) 0%, hsl(200 92% 55%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(210 55% 98%) 0%, hsl(214 45% 96%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 45% 98%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(213 94% 43%) 0%, hsl(200 92% 55%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 22px hsl(213 94% 43% / 0.18);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 213 94% 43%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 216 72% 32%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 212 26% 83%;
+    --sidebar-ring: 213 94% 43%;
+    --chart-1: 211 96% 60%;
+    --chart-2: 200 92% 55%;
+    --chart-3: 215 20% 65%;
+    --chart-4: 215 16% 46%;
+    --chart-5: 215 19% 34%;
+    --sidebar: 210 40% 98%;
+    --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    --font-serif: 'Lora', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 32% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 24% 26%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 211 96% 60%;
+    --primary-foreground: 216 72% 14%;
+
+    --secondary: 216 72% 45%;
+    --secondary-foreground: 210 40% 98%;
+
+    --tertiary: 200 92% 55%;
+    --tertiary-foreground: 216 72% 14%;
+
+    --muted: 215 16% 46%;
+    --muted-foreground: 210 40% 98%;
+
+    --accent: 216 60% 16%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 85% 97%;
+
+    --border: 215 19% 34%;
+    --input: 215 19% 34%;
+    --ring: 211 96% 60%;
+
+    --sidebar-background: 210 25% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 211 96% 60%;
+    --sidebar-primary-foreground: 216 72% 14%;
+    --sidebar-accent: 216 60% 16%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 19% 34%;
+    --sidebar-ring: 211 96% 60%;
+    --chart-1: 199 95% 73%;
+    --chart-2: 211 96% 78%;
+    --chart-3: 215 20% 65%;
+    --chart-4: 215 16% 46%;
+    --chart-5: 215 19% 34%;
+    --sidebar: 217 32% 17%;
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  /* Focus states for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+}
+
+@layer components {
+  /* Hero section styling */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    @apply shadow-lg -translate-y-1;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Button glow effect */
+  .btn-glow {
+    @apply transition-all duration-300;
+  }
+
+  .btn-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  /* Section containers */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Accessibility helpers */
+  html.high-contrast {
+    /* Hint UA widgets (inputs, scrollbars, etc.) */
+    color-scheme: dark;
+
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 92%;
+
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 0 0% 70%;
+    --input: 0 0% 70%;
+
+    /* Keep a blue primary, but ensure sufficient contrast */
+    --primary: 210 100% 60%;
+    --primary-foreground: 0 0% 0%;
+    --ring: 210 100% 60%;
+
+    /* Gradients used across the site should not stay "light" in high-contrast mode */
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 0%) 0%, hsl(0 0% 0%) 100%);
+  }
+
+  /* Make sure "hard-coded light" utility classes don't break contrast.
+     Some pages still use bg-white; in high-contrast that becomes unreadable with light text. */
+  html.high-contrast body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  html.high-contrast .bg-white {
+    background-color: hsl(var(--background)) !important;
+  }
+
+  html.high-contrast .bg-white\/90,
+  html.high-contrast .bg-white\/80,
+  html.high-contrast .bg-white\/70,
+  html.high-contrast .bg-white\/60,
+  html.high-contrast .bg-white\/50,
+  html.high-contrast .bg-white\/40,
+  html.high-contrast .bg-white\/30,
+  html.high-contrast .bg-white\/20,
+  html.high-contrast .bg-white\/10 {
+    background-color: hsl(var(--background)) !important;
+  }
+
+  /* Ensure hero area becomes dark in high-contrast mode (the default hero gradient is light) */
+  html.high-contrast .hero-gradient {
+    background: hsl(var(--background)) !important;
+  }
+
+  html.high-contrast a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  html.high-contrast ::selection {
+    background: hsl(var(--primary) / 0.5);
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Form styling */
+  .form-label {
+    @apply text-sm font-medium text-foreground mb-1.5 block;
+  }
+
+  .form-helper {
+    @apply text-xs text-muted-foreground mt-1;
+  }
+
+  .form-error {
+    @apply text-xs text-destructive mt-1 flex items-center gap-1;
+  }
+
+  /* Skip link for accessibility */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from { 
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to { 
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Stagger animation delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
